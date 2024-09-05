@@ -12,8 +12,7 @@ def calculator():
         operation = get_operation()
 
         if operation == "9":
-            print("Programa finalizado")
-            exit(0)
+            quit_program()
 
         num1 = get_number("Informe o primeiro numero: ")
         num2 = get_number("Informe o segundo numero: ")
@@ -62,6 +61,11 @@ def divide(x, y):
     if y == 0:
         raise ValueError("Nao é possivel dividir por zero.")
     return x / y
+
+
+def quit_program():
+    print("Programa finalizado!")
+    exit()
 
 
 if __name__ == "__main__":
