@@ -3,6 +3,7 @@ def calculator():
 
     operations = {
         "+": add,
+        "-": subtract,
     }
 
     while True:
@@ -22,10 +23,10 @@ def calculator():
 def get_operation():
     while True:
         operation = input(
-            "Informe o simbolo referente a operacao desejada ('+') ou '9' para sair do programa: "
+            "Informe o simbolo referente a operacao desejada ('+', '-') ou '9' para sair do programa: "
         )
 
-        if operation not in ("+","9"):
+        if operation not in ("+", "-", "9"):
             print("Operacao invalida. Favor, informe uma das opcoes apresentadas")
             continue
 
@@ -40,8 +41,12 @@ def get_number(prompt):
             print("Favor, digite um numero valido.")
 
 
-def add(x, y):
-    return x + y
+def add(num1, num2):
+    return num1 + num2
+
+
+def subtract(num1, num2):
+    return num1 - num2
 
 
 if __name__ == "__main__":
